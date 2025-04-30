@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Third-party apps
     "rest_framework",
     "corsheaders",
+    "djongo",
     # Local app
     "octofit_tracker",
 ]
@@ -83,11 +84,8 @@ DATABASES = {
     "default": {
         "ENGINE": "djongo",
         "NAME": "octofit_db",
-        "ENFORCE_SCHEMA": False,
-        "CLIENT": {
-            "host": "localhost",
-            "port": 27017,
-        },
+        "HOST": "localhost",
+        "PORT": 27017,
     }
 }
 
